@@ -40,6 +40,18 @@ osfcache_get <- function(guid, cache_dir = default_cache_location(), create_cach
   active_file_meta
 }
 
+#' Check to see if cache is outdated
+#'
+#' Fetches the most recent meta with GUID `guid` to see if
+#' 1. the requested object exists in the cache
+#' 1. the cache's version of the object is outdated
+#'
+#' @param guid An OSF GUID string
+#' @param cache_dir Where the cache is located
+#' @param create_cache_dir If cache dir doesn't exist it, create it if TRUE
+#' @return Logical if the cache is outdated
+#'
+#' @export
 osfcache_is_outdated <- function(guid, cache_dir = default_cache_location(), create_cache_dir = TRUE) {
   meta_dir <- file.path(cache_dir, "meta")
   asset_dir <- file.path(cache_dir, "assets")
