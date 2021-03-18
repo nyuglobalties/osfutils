@@ -1,5 +1,4 @@
 # osfutils 0.1.0
 
-# osfutils 0.0.0.9000
-
+* First major release
 * Added a `NEWS.md` file to track changes to the package.
